@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace Examples
@@ -52,7 +53,7 @@ namespace Examples
     {
         public static string CreateMessage(string info)
         {
-            return SystemTime.Now.ToShortDateString() + " " + info;
+            return SystemTime.Now.ToString("d", CultureInfo.GetCultureInfo("en-US")) + " " + info;
         }
     }
 
